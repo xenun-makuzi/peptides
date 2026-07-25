@@ -141,7 +141,7 @@ function renderCart() {
 
   // Determine delivery cost based on dropdown selection
   const isShipping = !shippingSelect || shippingSelect.value === "yes";
-  const shippingFee = isShipping ? 15.00 : 0.00;
+  const shippingFee = isShipping ? 50.00 : 0.00;
   const grandTotal = subtotal + shippingFee;
 
   if (cartSubtotal) cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
