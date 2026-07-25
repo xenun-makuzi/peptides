@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Details | Austrian Peptides</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/product.css">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+
+<body>
+
+
+
+<header class="navbar">
+
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="assets/images/logo.png">
+
+</a>
+
+</div>
+
+
+
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="products.html">
+Products
+</a>
+
+<a href="#">
+Lab Tests
+</a>
+
+<a href="#">
+Contact
+</a>
+
+</nav>
+
+
+
+
+<a href="cart.html" class="cart">
+
+<i data-lucide="shopping-cart"></i>
+
+<span id="cartCount">
+0
+</span>
+
+</a>
+
+
+</header>
+
+
+
+
+
+
+
+<section class="product-page">
+
+
+
+<div class="gallery">
+
+
+<img 
+id="mainImage"
+src=""
+alt="Product">
+
+
+
+<div class="thumbs">
+
+
+<img
+id="productImageThumb"
+onclick="changeImage(this.src)"
+>
+
+
+<img
+id="labImageThumb"
+onclick="changeImage(this.src)"
+>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="details">
+
+
+
+<span class="badge">
+
+Lab Tested
+
+</span>
+
+
+
+
+<h1 id="productName">
+
+Loading...
+
+</h1>
+
+
+
+
+<p id="productDescription">
+
+</p>
+
+
+
+
+
+<h2 id="productPrice">
+
+</h2>
+
+
+
+
+
+<div class="quantity">
+
+
+<button id="minus">
+-
+</button>
+
+
+<input 
+id="quantity"
+value="1"
+readonly>
+
+
+
+<button id="plus">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+id="addCart"
+class="add-button">
+
+Add To Cart
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="lab">
+
+
+<h2>
+Laboratory Documentation
+</h2>
+
+
+
+<img 
+id="labImage"
+alt="Lab Test">
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="related">
+
+
+<h2>
+Related Products
+</h2>
+
+
+
+<div 
+id="relatedProducts"
+class="related-grid">
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+
+<p>
+© 2026 Austrian Peptides
+</p>
+
+
+</footer>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/product.js"></script>
+
+
+<script>
+lucide.createIcons();
+</script>
+
+
+</body>
+
+</html>

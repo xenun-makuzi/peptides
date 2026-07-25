@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austrian Peptides | Premium Research Products</title>
+    <meta name="description" content="Austrian Peptides provides premium research products backed by transparent laboratory documentation.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Lucide SVG Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Age Verification Modal -->
+    <div class="age-overlay" id="ageModal" role="dialog" aria-modal="true" aria-labelledby="ageModalTitle">
+        <div class="age-box">
+            <h2 id="ageModalTitle">Research Products Notice</h2>
+            <p>You must be 18 years or older to access this website.</p>
+            <p>Products are intended strictly for laboratory research purposes only.</p>
+            <div class="age-buttons">
+                <button id="enterBtn" class="btn-primary">Enter Website</button>
+                <button id="leaveBtn" class="btn-outline">Leave</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        <div>
+            <i data-lucide="flask-conical"></i>
+            <span>Lab Tested</span>
+        </div>
+        <div>
+            <i data-lucide="truck"></i>
+            <span>Fast Shipping</span>
+        </div>
+        <div>
+            <i data-lucide="shield-check"></i>
+            <span>Secure Ordering</span>
+        </div>
+    </div>
+
+    <!-- Navbar Header -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <span style="font-weight:700; font-size:1.2rem; color:var(--primary, #0f172a);">Austrian Peptides</span>
+            </a>
+        </div>
+
+        <nav id="navMenu" aria-label="Main Navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="lab-results.html">Lab Tests</a>
+            <a href="#about">About</a>
+            <a href="admin/index.html">Login</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="cart.html" class="cart" aria-label="Shopping Cart">
+                <i data-lucide="shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </a>
+
+            <button class="menu" id="menuBtn" aria-label="Toggle Mobile Menu">
+                <i id="menuIcon" data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Premium Research Peptides With Transparent Laboratory Testing</h1>
+                <p>High quality research compounds supported by detailed certificates of analysis and professional customer support.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn-primary">Explore Products</a>
+                    <a href="lab-results.html">View Lab Tests</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products (Dynamic Supabase Grid) -->
+        <!-- Categories Section (Dynamic Supabase Grid) -->
+<section class="featured-products">
+    <div class="section-header">
+        <h2>Product Categories</h2>
+        <p>Browse our catalog by product type.</p>
+    </div>
+
+    <div class="products-grid" id="categoriesContainer">
+        <div class="loading-state">
+            <p>Loading categories...</p>
+        </div>
+    </div>
+</section>
+
+        <!-- Lab Testing Section -->
+        <section class="lab-section" id="lab-section">
+            <div class="lab-container">
+                <div class="lab-content">
+                    <h2>Verified Laboratory Testing</h2>
+                    <p>Transparency and quality are at the core of Austrian Peptides. Each product is supported by detailed laboratory documentation to provide customers with clear information about product testing.</p>
+
+                    <div class="lab-features">
+                        <div class="lab-feature">
+                            <i data-lucide="file-check"></i>
+                            <div>
+                                <h3>Certificate Of Analysis</h3>
+                                <p>Access complete batch-specific testing documentation.</p>
+                            </div>
+                        </div>
+
+                        <div class="lab-feature">
+                            <i data-lucide="microscope"></i>
+                            <div>
+                                <h3>Quality Verification</h3>
+                                <p>Products undergo stringent laboratory evaluation for purity.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="lab-results.html" class="lab-button">View Lab Tests</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-section" id="why-us">
+            <div class="section-header">
+                <h2>Why Choose Austrian Peptides?</h2>
+                <p>Committed to quality, transparency, and customer experience.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <i data-lucide="flask-conical"></i>
+                    <h3>Laboratory Transparency</h3>
+                    <p>Access detailed product information and laboratory documentation designed to provide clarity and confidence.</p>
+                </div>
+
+                <div class="why-card">
+                    <i data-lucide="award"></i>
+                    <h3>Quality Focus</h3>
+                    <p>We focus on providing carefully handled research products with attention to consistency and quality.</p>
+                </div>
+
+                <div class="why-card">
+                    <i data-lucide="shield-check"></i>
+                    <h3>Secure Ordering</h3>
+                    <p>Customer information and orders are handled through encrypted, secure systems.</p>
+                </div>
+
+                <div class="why-card">
+                    <i data-lucide="headphones"></i>
+                    <h3>Dedicated Support</h3>
+                    <p>Our support team is available to assist customers with questions and order information.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals (Dynamic Supabase Grid) -->
+        <section class="collection-section">
+            <div class="section-header">
+                <h2>New Arrivals</h2>
+                <p>Discover our latest research products.</p>
+            </div>
+
+            <div class="products-grid" id="newArrivalsContainer">
+                <div class="loading-state">
+                    <p>Loading products...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <!-- 1. Before & After / Research Results Section -->
+<section class="results-section">
+    <div class="section-header">
+        <h2>Documented Research Results</h2>
+        <p>Observed laboratory metrics and compound documentation over standardized research periods.</p>
+    </div>
+
+    <div class="results-grid">
+        <div class="result-card">
+            <div class="result-images">
+                <div class="img-wrapper">
+                    <span class="img-badge">Day 1</span>
+                    <img src="https://via.placeholder.com/400x300?text=Initial+Baseline" alt="Initial Baseline Assessment">
+                </div>
+                <div class="img-wrapper">
+                    <span class="img-badge success">Day 30</span>
+                    <img src="https://via.placeholder.com/400x300?text=Day+30+Evaluation" alt="Day 30 Evaluation">
+                </div>
+            </div>
+            <div class="result-details">
+                <h3>Peptide Purity & Reconstitution Analysis</h3>
+                <p>Standardized solubility test demonstrating complete dissolution with zero residual particulate across 30-day thermal stability tracking.</p>
+                <div class="result-meta">
+                    <span><i data-lucide="check-circle-2"></i> High Stability</span>
+                    <span><i data-lucide="shield-check"></i> HPLC Verified</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <div class="result-images">
+                <div class="img-wrapper">
+                    <span class="img-badge">Before</span>
+                    <img src="https://via.placeholder.com/400x300?text=Pre-Test+Sample" alt="Pre-Test Sample">
+                </div>
+                <div class="img-wrapper">
+                    <span class="img-badge success">After</span>
+                    <img src="https://via.placeholder.com/400x300?text=Post-Test+Sample" alt="Post-Test Sample">
+                </div>
+            </div>
+            <div class="result-details">
+                <h3>Cellular Assay Observation</h3>
+                <p>Comparative tissue assay showing structural integrity retention and predictable compound interactions under controlled assay conditions.</p>
+                <div class="result-meta">
+                    <span><i data-lucide="check-circle-2"></i> >99% Purity</span>
+                    <span><i data-lucide="file-text"></i> COA Attached</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. Customer Reviews & Testimonials Section -->
+<section class="reviews-section">
+    <div class="section-header">
+        <h2>Researcher Feedback & Testimonials</h2>
+        <p>Read genuine reviews from registered laboratory technicians and independent researchers.</p>
+    </div>
+
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+            </div>
+            <p>"The purity levels consistently match the HPLC certificates provided. Fast shipping within Austria and top-tier packaging."</p>
+            <div class="customer">
+                <h4>Dr. M. Weber</h4>
+                <span>Verified Researcher</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+            </div>
+            <p>"Customer service answered all my technical batch questions within an hour. The reconstitution process was flawless."</p>
+            <div class="customer">
+                <h4>Stefan K.</h4>
+                <span>Biotech Consultant</span>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+            </div>
+            <p>"Having transparent laboratory batch documentation readily available makes ordering for our lab completely hassle-free."</p>
+            <div class="customer">
+                <h4>Elena R.</h4>
+                <span>Lab Manager</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. Expanded & Comprehensive FAQ Section -->
+<section class="faq-section">
+    <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Clear answers regarding product specifications, ordering, testing, and shipping.</p>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-item active">
+            <button class="faq-question">
+                <span>Are your products intended for human consumption?</span>
+                <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>No. All products sold by Austrian Peptides are strictly intended for laboratory and in-vitro research purposes only. They are not for human or animal consumption, medical diagnosis, or therapeutic use.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>How can I access the Certificate of Analysis (COA) for my batch?</span>
+                <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Certificates of Analysis and HPLC batch testing reports can be viewed directly on individual product detail pages or requested directly from support using your order batch reference number.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>What are your shipping domestic and international delivery times?</span>
+                <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Standard domestic shipping within Austria takes 1–3 business days. Expedited European Union shipping typically arrives in 3–5 business days with full end-to-end tracking.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>How should research peptides be stored upon arrival?</span>
+                <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Lyophilized (powdered) peptides should be stored in a cool, dry place away from direct light (preferably at -20°C for long-term storage). Reconstituted liquids should be refrigerated at 2°C–8°C.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>What payment methods do you accept?</span>
+                <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>We accept major credit/debit cards,secure bank wire transfers, and select encrypted cryptocurrency options to ensure maximum privacy and security as well as a variety of options.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Call To Action -->
+        <section class="cta">
+            <div class="cta-overlay"></div>
+            <div class="cta-content">
+                <h2>Ready to Place Your Order?</h2>
+                <p>Browse our premium research products or speak with our support team if you need assistance choosing the right product.</p>
+                <div class="cta-buttons">
+                    <a href="products.html" class="btn-primary">Browse Products</a>
+                    <a href="#contact" class="btn-secondary">Contact Support</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: #0f172a; color: white; padding: 40px 30px; text-align: center;">
+        <p>&copy; 2026 Austrian Peptides. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

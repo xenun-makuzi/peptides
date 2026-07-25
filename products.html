@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Products | Austrian Peptides</title>
+    <meta name="description" content="Browse our inventory of premium research peptides backed by laboratory documentation.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Lucide SVG Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <span style="font-weight:700; font-size:1.2rem; color:var(--primary, #0f172a);">Austrian Peptides</span>
+            </a>
+        </div>
+
+        <nav id="navMenu" aria-label="Main Navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="lab-results.html">Lab Tests</a>
+            <a href="index.html">About</a>
+            <a href="admin/index.html">Login</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="cart.html" class="cart" aria-label="View Cart">
+                <i data-lucide="shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </a>
+
+            <button class="menu" id="menuBtn" aria-label="Toggle Navigation Menu">
+                <i id="menuIcon" data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Header Banner & Filters -->
+        <section class="products-header">
+            <div class="header-content">
+                <h1>Research Products</h1>
+                <p>Explore our laboratory-tested compounds backed by full certificates of analysis.</p>
+            </div>
+
+            <!-- Enhanced Filters Section -->
+            <div class="filters">
+                <!-- Search with Auto-suggest Dropdown -->
+                <div class="search-box">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input 
+                        id="searchInput" 
+                        type="search" 
+                        placeholder="Search products by name..." 
+                        aria-label="Search products"
+                        autocomplete="off"
+                    >
+                    <div id="searchSuggestions" class="search-suggestions" hidden></div>
+                </div>
+
+                <!-- Category Filter -->
+                <!-- Category Filter -->
+<div class="select-box">
+    <select id="categoryFilter" aria-label="Filter products by category">
+        <option value="all">All Categories</option>
+        <option value="peptides">Peptides</option>
+        <option value="powder">Powder</option>
+        <option value="liquids">Liquids</option>
+        <option value="research">Research Compounds</option>
+    </select>
+</div>
+
+                <!-- Price Range Filter -->
+                <div class="price-filter-box">
+                    <div class="price-label">
+                        <span>Max Price:</span>
+                        <strong id="priceValue">$500</strong>
+                    </div>
+                    <input 
+                        type="range" 
+                        id="priceRange" 
+                        min="0" 
+                        max="500" 
+                        step="5" 
+                        value="500" 
+                        aria-label="Filter by maximum price"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Supabase Product Grid -->
+        <section class="products-section">
+            <div class="products-grid" id="productsContainer">
+                <div class="loading-state">
+                    <i data-lucide="loader" class="spin"></i>
+                    <p>Loading research catalog...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: #0f172a; color: white; padding: 40px 30px; text-align: center; margin-top: 60px;">
+        <p>&copy; 2026 Austrian Peptides. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+
+</body>
+
+</html>

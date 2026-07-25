@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Products | Austrian Peptides</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/products.css">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+<img src="assets/images/logo.png">
+</a>
+
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="#">Lab Tests</a>
+<a href="#">Contact</a>
+
+</nav>
+
+
+<a href="cart.html" class="cart">
+
+<i data-lucide="shopping-cart"></i>
+
+<span id="cartCount">0</span>
+
+</a>
+
+
+</header>
+
+
+
+
+
+<section class="products-header">
+
+
+<h1>
+Research Products
+</h1>
+
+
+<p>
+Browse our available laboratory documented products.
+</p>
+
+
+
+<div class="filters">
+
+
+<input 
+id="searchInput"
+type="search"
+placeholder="Search products...">
+
+
+<select id="categoryFilter">
+
+<option value="all">
+All Categories
+</option>
+
+
+<option value="peptides">
+Peptides
+</option>
+
+
+<option value="research">
+Research
+</option>
+
+
+<option value="new">
+New Arrivals
+</option>
+
+
+</select>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="products-section">
+
+
+<div 
+class="products-grid"
+id="productsContainer">
+
+
+<p>
+Loading products...
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 Austrian Peptides
+</p>
+
+</footer>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/products.js"></script>
+
+
+<script>
+lucide.createIcons();
+</script>
+
+
+</body>
+
+</html>

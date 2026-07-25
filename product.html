@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Austrian Peptides</title>
+    <meta name="description" content="View detailed specifications and laboratory testing documentation for this research compound.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Lucide SVG Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Header Navbar -->
+   <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <span style="font-weight:700; font-size:1.2rem; color:var(--primary, #0f172a);">Austrian Peptides</span>
+            </a>
+        </div>
+
+        <nav id="navMenu" aria-label="Main Navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="lab-results.html">Lab Tests</a>
+            <a href="#about">About</a>
+            <a href="admin/index.html">Login</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="cart.html" class="cart" aria-label="View Cart">
+                <i data-lucide="shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </a>
+
+            <button class="menu" id="menuBtn" aria-label="Toggle Navigation Menu">
+                <i id="menuIcon" data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="product-detail-container">
+        <!-- Dynamic Product Detail Container -->
+        <div id="productDetailWrapper">
+            <!-- Loading State -->
+            <div class="loading-state">
+                <i data-lucide="loader" class="spin"></i>
+                <p>Loading compound details...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: #0f172a; color: white; padding: 40px 30px; text-align: center; margin-top: 60px;">
+        <p>&copy; 2026 Austrian Peptides. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+
+</body>
+
+</html>

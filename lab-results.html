@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austrian Peptides | Lab Test Reports & COA</title>
+
+    <!-- Modern Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="lab-results.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <i data-lucide="shield-check"></i>
+                <span>Austrian Peptides</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Catalog</a>
+                <a href="lab-results.html" class="active">Lab Results</a>
+                <a href="cart.html" class="cart-btn"><i data-lucide="shopping-bag"></i> Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="results-container">
+        <section class="hero-banner">
+            <div class="badge-tag"><i data-lucide="award"></i> 3rd Party Verified</div>
+            <h1>Certificates of Analysis (COA)</h1>
+            <p>Every single batch undergoes rigorous HPLC and MS testing by accredited third-party laboratories to guarantee 99%+ purity.</p>
+        </section>
+
+        <!-- Search & Filter Bar -->
+        <div class="filter-bar">
+            <div class="search-input-box">
+                <i data-lucide="search"></i>
+                <input type="text" id="searchInput" placeholder="Search product name or batch number...">
+            </div>
+        </div>
+
+        <!-- COA Gallery Grid -->
+        <div id="coaGrid" class="coa-grid">
+            <div class="loading-state">
+                <i data-lucide="loader" class="spin"></i>
+                <p>Loading verification reports...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Image Lightbox Modal for Full View -->
+    <div id="lightboxModal" class="lightbox-overlay" style="display: none;">
+        <span class="close-btn" id="closeLightbox">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Lab Report Full View">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <script src="js/supabase.js"></script>
+    <script src="lab-results.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

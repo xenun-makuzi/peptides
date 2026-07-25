@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>
+Austrian Peptides CMS
+</title>
+
+
+<link rel="stylesheet" href="admin.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+</head>
+
+
+<body>
+
+
+<div class="admin">
+
+
+<h1>
+Austrian Peptides CMS
+</h1>
+
+
+
+<section class="form-box">
+
+
+<h2 id="formTitle">
+Add Product
+</h2>
+
+
+
+<input id="productId" type="hidden">
+
+
+
+<label>
+Product Name
+</label>
+
+<input id="name">
+
+
+
+<label>
+Price
+</label>
+
+<input id="price" type="number">
+
+
+
+<label>
+Category
+</label>
+
+<select id="category">
+
+<option value="peptides">
+Peptides
+</option>
+
+<option value="research">
+Research
+</option>
+
+<option value="new">
+New Arrival
+</option>
+
+</select>
+
+
+
+
+<label>
+Description
+</label>
+
+
+<textarea id="description"></textarea>
+
+
+
+
+
+<label>
+Product Image
+</label>
+
+
+<input 
+type="file"
+id="productImage"
+accept="image/*">
+
+
+
+
+
+<label>
+Lab Test Image
+</label>
+
+
+<input 
+type="file"
+id="labImage"
+accept="image/*">
+
+
+
+
+
+<div class="checkbox">
+
+
+<label>
+<input type="checkbox" id="featured">
+
+Featured
+
+</label>
+
+
+
+<label>
+<input type="checkbox" id="newArrival">
+
+New Arrival
+
+</label>
+
+
+
+<label>
+<input type="checkbox" id="bestSeller">
+
+Best Seller
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+<button id="saveBtn">
+
+Save Product
+
+</button>
+
+
+
+<p id="message"></p>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+
+
+<h2>
+Products
+</h2>
+
+
+
+<div id="productsList">
+
+Loading...
+
+</div>
+
+
+
+</section>
+
+
+
+</div>
+
+
+
+
+
+<script src="../js/supabase.js"></script>
+
+<script src="admin.js"></script>
+
+
+
+</body>
+
+</html>
